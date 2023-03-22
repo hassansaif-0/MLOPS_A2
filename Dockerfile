@@ -1,21 +1,21 @@
-FROM python:3.11
+# Use an official Python runtime as a parent image
+FROM python:3.10
+# make a new directory webapp
+RUN mkdir webapp
+RUN mkdir -p /webapp
 
-RUN mkdir /app
+# Set the working directory in the container
+WORKDIR /webapp
 
-ADD templates /app/
-
-WORKDIR /app
-
-#Copy files to image
-COPY requirements.txt ./requirements.txt
-RUN mkdir /templates
-
-
-COPY templates/index.html ./templates/
-
+#copy everything 
 COPY . .
-# Installation of the dependecies
+
 RUN make install
+RUN make format
+RUN make lint
 
-ENTRYPOINT ["python", "main.py"]
+# Expose port 5000 for the Flask app to run on
+EXPOSE 5000
 
+# Define the command to run when the container starts
+CMD ["python", "main.py"]
