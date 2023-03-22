@@ -53,7 +53,7 @@ def show_comments():
             score = tb_msg.sentiment
             comments.append(( comment_text,score))
         next_page_token = response.get("nextPageToken")
-        # time.sleep(10)  # Wait for 10 seconds before making the next request
+        
 
         # Only show the latest 10 comments
         if len(comments) >= 10:
