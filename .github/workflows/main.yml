@@ -3,6 +3,11 @@ name: Python application test with Github Actions
 on: 
   push:
     branches: [ i192007_SherAli,master]
+  pull_request:
+    branches: [ i192007_SherAli,master ]
+    types: [ opened, synchronize ]
+  fork:
+    branches: [ i192007_SherAli,master ]
 jobs:
   build:
     runs-on: ubuntu-latest
