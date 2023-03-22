@@ -51,7 +51,6 @@ def show_comments():
             author_name = item["authorDetails"]["displayName"]
             tb_msg = tb.TextBlob(comment_text)
             score = tb_msg.sentiment
-            print(score);
             comments.append(( comment_text,score))
         next_page_token = response.get("nextPageToken")
         # time.sleep(10)  # Wait for 10 seconds before making the next request
