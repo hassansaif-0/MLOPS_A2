@@ -25,5 +25,7 @@ The sentiment scores are calculated using the TextBlob library, which assigns a 
 This project was developed by [Sher Ali , Hassan Saif]. It uses the following third-party libraries:
 
 Flask
+
 Google API Client
+
 TextBlob
