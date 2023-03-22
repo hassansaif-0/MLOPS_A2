@@ -68,41 +68,4 @@ if __name__ == "__main__":
 
 
 
-# def sentiment_analysis(post):
-
-#     # Here's where the magic happens
-#     tb_msg = tb(post)
-#     score = tb_msg.sentiment
-#     print(post,"   ",score)
-
-
-
-
-
-
-
-# # Continuously retrieve new comments
-# ext_page_token = None
-# while True:
-#     response = youtube.liveChatMessages().list(
-#         liveChatId=live_chat_id,
-#         part="snippet, authorDetails",
-#         pageToken=next_page_token
-#     ).execute()
-
-#     for item in response["items"]:
-#         comment_text = item["snippet"]["textMessageDetails"]["messageText"]
-#         author_name = item["authorDetails"]["displayName"]
-     
-#         print(f"{comment_text}     n         score:{score}")
-
-#     next_page_token = response.get("nextPageToken")
-#     time.sleep(10) 
-
-# # # Print the comments
-# # for item in comment_response['items']:
-# #     comment = item['snippet']['topLevelComment']['snippet']['textDisplay']
-
-    
-
 
