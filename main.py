@@ -59,6 +59,7 @@ def show_comments():
         if len(comments) >= 10:
             break
     comments.reverse();
+    print(comments);
     # Render the template with the comments
     return jsonify({"comments": comments})
 
