@@ -51,6 +51,7 @@ def show_comments():
             author_name = item["authorDetails"]["displayName"]
             tb_msg = tb.TextBlob(comment_text)
             score = tb_msg.sentiment
+            print(score)
             comments.append(( comment_text,score))
         next_page_token = response.get("nextPageToken")
         
@@ -59,11 +60,12 @@ def show_comments():
         if len(comments) >= 10:
             break
     comments.reverse();
+    print(comments);
     # Render the template with the comments
     return jsonify({"comments": comments})
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=5000)
 
 
 
