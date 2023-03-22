@@ -1,0 +1,7 @@
+textblob
+flask
+google-api-python-client
+black
+pylint
+pytest
+pytest-cov
