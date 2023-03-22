@@ -2,7 +2,7 @@
 name: Python application test with Github Actions
 on: 
   push:
-    branches: [ i190560]
+    branches: [ i190560_hassansaif,master]
 jobs:
   build:
     runs-on: ubuntu-latest
