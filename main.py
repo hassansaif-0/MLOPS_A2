@@ -1,4 +1,4 @@
-
+#Adding necessary files
 from flask import Flask, render_template,jsonify
 import textblob as tb
 import os
