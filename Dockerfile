@@ -8,9 +8,6 @@ WORKDIR /app
 
 #Copy files to image
 COPY requirements.txt ./requirements.txt
-COPY Makefile ./Makefile
-COPY app.py ./app.py
-
 RUN mkdir /templates
 
 
